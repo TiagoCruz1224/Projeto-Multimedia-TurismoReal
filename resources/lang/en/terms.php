@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'title' => 'General Terms of Service',
+    'description' => 'Simple landing page',
+    'keywords' => '',
+    'author' => '',
+    'hero_title' => 'General Terms of Service',
+    'brand' => 'Turismo Real',
+    'welcome_message' => 'Welcome to the General Terms of Service of Turismo Real. These terms govern the use of our services. By using them, you agree to the following terms and conditions. Please read carefully before continuing.',
+    'section1_title' => '1. Acceptance of Terms',
+    'section1_content' => 'By accessing and using our services, you agree to comply with these General Terms of Service. If you do not agree with any part of these terms, please do not use our services.',
+    'section2_title' => '2. Responsible Use',
+    'section2_content' => 'You agree to use our services responsibly, respecting all applicable laws and regulations. Misuse of our services may result in the suspension or termination of your account.',
+    'section3_title' => '3. Privacy',
+    'section3_content' => 'We respect your privacy. By using our services, you agree to the collection, use, and disclosure of your information as described in our Privacy Policy. We recommend reviewing our Privacy Policy to understand how we handle your information.',
+    'section4_title' => '4. User Content',
+    'section4_content' => 'By providing any content to our services, you grant Turismo Real the non-exclusive right to use, modify, display, and distribute that content. Make sure you have the necessary rights to share any content.',
+    'section5_title' => '5. Modifications to the Terms',
+    'section5_content' => 'We reserve the right to modify these General Terms of Service at any time. Any changes will take effect immediately upon being published on our website. We recommend periodically reviewing the terms to be aware of any updates.',
+    'section6_title' => '6. Intellectual Property',
+    'section6_content' => 'The services, including texts, graphics, logos, images, and other materials, are protected by copyright and other intellectual property laws. You agree to respect all copyrights and other intellectual property rights present in the services.',
+    'section7_title' => '7. Usage Restrictions',
+    'section7_content' => 'You agree not to use our services for illegal or prohibited activities. This includes, but is not limited to, transmitting illegal content, disrupting the functionality of the services, or violating the rights of third parties.',
+    'section8_title' => '8. Disclaimer of Liability',
+    'section8_content' => 'We provide our services "as is," without warranties of any kind. We are not liable for direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use our services.',
+    'effective_date' => 'These General Terms of Service are effective as of 01/01/2024. If you have any questions or concerns, please contact us at [support.turismoreal@gmail.com]. Thank you for choosing Turismo Real. We hope you have an amazing experience using our services. Sincerely, Turismo Real Team',
+];

@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'title' => 'Termos Gerais de Uso',
+    'description' => 'Página simples',
+    'keywords' => '',
+    'author' => '',
+    'hero_title' => 'Termos Gerais de Uso',
+    'brand' => 'Turismo Real',
+    'welcome_message' => 'Bem-vindo aos Termos Gerais de Uso da Turismo Real. Estes termos regem o uso dos nossos serviços. Ao utilizá-los, você concorda com os seguintes termos e condições. Leia atentamente antes de continuar.',
+    'section1_title' => '1. Aceitação dos Termos',
+    'section1_content' => 'Ao acessar e utilizar nossos serviços, você concorda em cumprir estes Termos Gerais de Uso. Se não concordar com qualquer parte destes termos, por favor, não utilize os nossos serviços.',
+    'section2_title' => '2. Uso Responsável',
+    'section2_content' => 'Você concorda em utilizar os nossos serviços de maneira responsável, respeitando todas as leis e regulamentos aplicáveis. O uso indevido dos nossos serviços pode resultar na suspensão ou encerramento da sua conta.',
+    'section3_title' => '3. Privacidade',
+    'section3_content' => 'Respeitamos a sua privacidade. Ao utilizar nossos serviços, você concorda com a coleta, uso e divulgação de suas informações conforme descrito em nossa Política de Privacidade. Recomendamos que revise nossa Política de Privacidade para entender como tratamos as suas informações.',
+    'section4_title' => '4. Conteúdo do Usuário',
+    'section4_content' => 'Ao fornecer qualquer conteúdo aos nossos serviços, você concede à Turismo Real o direito não exclusivo de usar, modificar, exibir e distribuir esse conteúdo. Certifique-se de que possui os direitos necessários para compartilhar qualquer conteúdo.',
+    'section5_title' => '5. Modificações nos Termos',
+    'section5_content' => 'Reservamo-nos o direito de modificar estes Termos Gerais de Uso a qualquer momento. Quaisquer alterações entrarão em vigor imediatamente após serem publicadas em nosso site. Recomendamos que revise periodicamente os termos para estar ciente de quaisquer atualizações.',
+    'section6_title' => '6. Propriedade Intelectual',
+    'section6_content' => 'Os serviços, incluindo textos, gráficos, logotipos, imagens e outros materiais, são protegidos por direitos autorais e outras leis de propriedade intelectual. Você concorda em respeitar todos os direitos autorais e outros direitos de propriedade intelectual presentes nos serviços.',
+    'section7_title' => '7. Restrições de Uso',
+    'section7_content' => 'Você concorda em não utilizar nossos serviços para atividades ilegais ou proibidas. Isso inclui, mas não se limita a, transmitir conteúdo ilegal, perturbar a funcionalidade dos serviços ou violar os direitos de terceiros.',
+    'section8_title' => '8. Isenção de Responsabilidade',
+    'section8_content' => 'Nós fornecemos nossos serviços "como estão", sem garantias de qualquer tipo. Não nos responsabilizamos por danos diretos, indiretos, incidentais, especiais ou consequenciais resultantes do uso ou incapacidade de usar nossos serviços.',
+    'effective_date' => 'Estes Termos Gerais de Uso são eficazes a partir de 01/01/2024. Se tiver alguma dúvida ou preocupação, entre em contato connosco através do e-mail [suporte.turismoreal@gmail.com]. Agradecemos por escolher a Turismo Real. Esperamos que tenha uma experiência incrível ao utilizar os nossos serviços. Atenciosamente, Equipa Turismo Real',
+];
