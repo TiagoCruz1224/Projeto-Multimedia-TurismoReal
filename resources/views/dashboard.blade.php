@@ -21,8 +21,8 @@
                     <div class="p-6 text-gray-900">
                         @role('admin|mod')
                             <ul>
-                                @foreach (Session::get('usersList') as $user)
-                                    <li>{{ $user->name }}</li>
+                                @foreach ($userNames as $name)
+                                    <li>{{ $name }}</li>
                                 @endforeach
                             </ul>
                         @endrole

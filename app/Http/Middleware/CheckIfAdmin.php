@@ -27,8 +27,8 @@ class CheckIfAdmin
      */
     private function checkIfUserIsAdmin($user)
     {
-        // return ($user->is_admin == 1);
-        return true;
+        // Site users and admins share the users table; only the spatie "admin" role may use the panel
+        return $user->hasRole('admin');
     }
 
     /**

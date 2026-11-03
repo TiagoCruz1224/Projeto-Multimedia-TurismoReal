@@ -3,12 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BilheteController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoteiroController;
 use App\Models\About;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,8 +30,11 @@ Route::get('/change-language/{locale}', function ($locale) {
 Route::get('/', [HomeController::class, 'index'])->name('main');
 Route::get('/roteiro', [RoteiroController::class, 'inde'])->name('main');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/dashboard', function (Request $request) {
+    // Only admins and mods see the user list, and only the names it shows
+    $userNames = $request->user()->hasRole(['admin', 'mod']) ? User::pluck('name') : collect();
+
+    return view('dashboard', ['userNames' => $userNames]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -70,13 +74,13 @@ Route::middleware(['auth'])->group(function () {
 });
 Route::middleware(['auth'])->group(function () {
 Route::get('articles/create', [ArticleController::class, 'create'])->name('articles.create');
+    Route::post('articles/create', [ArticleController::class, 'store'])->name('articles.store');
     Route::delete('articles/{article}', [ArticleController::class, 'destroy'])
         ->name('articles.destroy')
         ->middleware('can:delete-article,article');
 });
-Route::post('articles/create', [ArticleController::class, 'store'])->name('articles.store');
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
-Route::get('/payment/{string}/{price}', [PaymentController::class, 'charge'])->name('goToPayment');
+// Checkout is not implemented: the old /payment/{product}/{price} route took the amount to charge from the URL
 require __DIR__.'/auth.php';

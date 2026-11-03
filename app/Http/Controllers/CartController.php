@@ -14,6 +14,15 @@ class CartController extends Controller
 
     public function addToCart(Request $request)
     {
+        // ponytail: the price still comes from the form; take it from the product if checkout is ever built
+        $request->validate([
+            'id' => 'required',
+            'name' => 'required|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'qnt' => 'required|integer|min:1',
+            'img' => 'nullable|string',
+        ]);
+
         \Cart::add([
             'id' => $request->id,
             'name' => $request->name,
