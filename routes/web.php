@@ -3,7 +3,6 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BilheteController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
@@ -78,5 +77,5 @@ Route::post('articles/create', [ArticleController::class, 'store'])->name('artic
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
-Route::get('/payment/{string}/{price}', [PaymentController::class, 'charge'])->name('goToPayment');
+// Checkout is not implemented: the old /payment/{product}/{price} route took the amount to charge from the URL
 require __DIR__.'/auth.php';
