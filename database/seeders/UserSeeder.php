@@ -20,7 +20,8 @@ class UserSeeder extends Seeder
             'password' => Hash::make($this->requiredEnv('SEED_ADMIN_PASSWORD')),
         ]);
 
-        $admin->assignRole('admin');
+        // Every new user gets "regular" on creation; the admin keeps only "admin"
+        $admin->syncRoles('admin');
 
         $user = User::create([
             'name' => 'TestUser',

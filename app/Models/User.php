@@ -18,7 +18,7 @@ class User extends Authenticatable
     use CrudTrait;
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
-    protected $dispachesEvents = [
+    protected $dispatchesEvents = [
             'created' => UserCreatedEvent::class,
     ];
 

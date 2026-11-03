@@ -5,7 +5,6 @@ namespace Tests\Feature;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Str;
-use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 
 class CartTest extends TestCase
@@ -30,9 +29,6 @@ class CartTest extends TestCase
 
     private function createUser(): User
     {
-        // New users get the "regular" role from a listener, so it must exist
-        Role::create(['name' => 'regular', 'guard_name' => 'web']);
-
         return User::factory()->create(['password' => Str::random(32)]);
     }
 }

@@ -5,22 +5,11 @@ namespace Tests\Feature;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Str;
-use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 
 class WriteRoutesAuthorizationTest extends TestCase
 {
     use RefreshDatabase;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        // New users get the "regular" role from a listener, so the roles must exist first
-        foreach (['admin', 'mod', 'regular'] as $role) {
-            Role::create(['name' => $role, 'guard_name' => 'web']);
-        }
-    }
 
     public function test_guests_cannot_create_articles(): void
     {
