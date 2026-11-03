@@ -10,7 +10,8 @@ tickets, merchandise and articles in English or Portuguese; registered users hav
 - Public pages: itinerary, tickets, merchandise, articles, FAQ, contacts, privacy policy and terms.
 - English and Portuguese content (translatable models and language files), with a language switch.
 - Registration, login and profile (Laravel Breeze).
-- Roles `admin` and `regular` (spatie/laravel-permission) and a Backpack admin panel for user management (`/admin`).
+- Roles `admin`, `mod` and `regular` (spatie/laravel-permission). Only `admin` can open the Backpack admin panel
+  (`/admin`) to manage users; `admin` and `mod` also see the user list on the dashboard. New accounts get `regular`.
 - Shopping cart for signed-in users.
 
 ## Tech stack
@@ -42,12 +43,22 @@ npm run build
 php artisan serve
 ```
 
+## Running the tests
+
+The tests use an in-memory SQLite database and need no frontend build:
+
+```bash
+php artisan test
+```
+
+They cover Laravel Breeze's authentication and profile flows, the public pages (each one answers with the site
+content seeded), adding items to the cart, and access control: guests cannot post articles, only admins can manage
+users in `/admin`, and the old payment route no longer exists.
+
 ## Known limitations
 
 - Checkout is not implemented: the cart has no payment step. An earlier payment route, which took the amount to charge
   from the URL, has been removed.
 - Cart prices come from the submitted form, not from the database. This only affects the displayed total, because
   nothing is charged.
-- Automated tests are the Laravel Breeze defaults plus a regression test for the removed payment route. Most Breeze
-  tests currently fail: the user factory's fixed password hash does not match the test hashing configuration.
 - The repository is large (about 100 MB of images).
