@@ -18,13 +18,13 @@ tickets, merchandise and articles in English or Portuguese; registered users hav
 
 | Layer | Technologies |
 |---|---|
-| Backend | PHP 8.2 to 8.4, Laravel 10, MySQL |
+| Backend | PHP 8.2 or 8.3, Laravel 10, MySQL |
 | Admin and packages | Backpack CRUD 6, Laravel Breeze, spatie/laravel-permission, spatie/laravel-translatable, spatie/laravel-medialibrary, darryldecode/cart |
 | Frontend | Blade, Tailwind CSS 3, Vite 4 |
 
 ## Getting started
 
-Requires PHP 8.2 to 8.4 (the versions the locked dependencies support) with the `exif` extension, Composer, Node.js and MySQL.
+Requires PHP 8.2 or 8.3 (the versions the locked dependencies support) with the `exif` extension, Composer, Node.js and MySQL.
 
 ```bash
 composer install
