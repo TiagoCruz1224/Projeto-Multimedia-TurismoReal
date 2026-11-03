@@ -43,6 +43,8 @@ npm run build
 php artisan serve
 ```
 
+Run the seeders before anyone registers: new accounts get the `regular` role, which the seeders create.
+
 ## Running the tests
 
 The tests use an in-memory SQLite database and need no frontend build:
