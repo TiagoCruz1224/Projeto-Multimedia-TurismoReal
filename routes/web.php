@@ -69,11 +69,11 @@ Route::middleware(['auth'])->group(function () {
 });
 Route::middleware(['auth'])->group(function () {
 Route::get('articles/create', [ArticleController::class, 'create'])->name('articles.create');
+    Route::post('articles/create', [ArticleController::class, 'store'])->name('articles.store');
     Route::delete('articles/{article}', [ArticleController::class, 'destroy'])
         ->name('articles.destroy')
         ->middleware('can:delete-article,article');
 });
-Route::post('articles/create', [ArticleController::class, 'store'])->name('articles.store');
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
