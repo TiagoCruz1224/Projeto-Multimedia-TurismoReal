@@ -8,6 +8,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoteiroController;
 use App\Models\About;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +30,11 @@ Route::get('/change-language/{locale}', function ($locale) {
 Route::get('/', [HomeController::class, 'index'])->name('main');
 Route::get('/roteiro', [RoteiroController::class, 'inde'])->name('main');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/dashboard', function (Request $request) {
+    // Only admins and mods see the user list, and only the names it shows
+    $userNames = $request->user()->hasRole(['admin', 'mod']) ? User::pluck('name') : collect();
+
+    return view('dashboard', ['userNames' => $userNames]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
